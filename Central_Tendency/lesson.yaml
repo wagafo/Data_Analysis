@@ -121,7 +121,7 @@
 - Class: cmd_question
   Output: Now store the contents of the 'cars$mpg_city' in a new variable called 'myMPG'.
   CorrectAnswer: myMPG <- cars$mpg_city
-  AnswerTests: newcmd=myMPG <- cars$mpg_city
+  AnswerTests: equivalent=myMPG <- cars$mpg_city
   Hint: Use the assignment operator to assign 'cars$mpg_city' to a new variable called
     'myMPG'.
 
