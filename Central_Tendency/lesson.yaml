@@ -176,7 +176,7 @@
     'myMPG' variable. The syntax for this function is the same as for the others you've
     seen.
   CorrectAnswer: table(myMPG)
-  AnswerTests: newcmd=table(myMPG)
+  AnswerTests: equivalent=table(myMPG)
   Hint: Type 'table' followed by your variable name placed in parentheses. As usual,
     leave out the spaces.
 
