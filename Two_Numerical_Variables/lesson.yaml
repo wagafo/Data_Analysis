@@ -290,6 +290,11 @@
   AnswerTests: omnitest(correctExpr='hist(fit.res)')
   Hint: You have to enter "hist(fit.res)" to plot a histogram of the  residuals.
 
+- Class: text
+  Output: The histogram allows as to assess if the residuals have an 
+    approximately normal distribution, which is one of the assumptions
+    for the results of the linear regression being reliable.
+
 - Class: figure
   Output: Still another piece of diagnosis of the regression analysis is
     the identification of influential observations. These are observations
@@ -445,16 +450,21 @@
   FigureType: new
 
 - Class: cmd_question
-  Output: We will use now the "plotluck" package in R to smooth the variation
-    of the dependent variable and get an idea of a possible non-linear
-    relation between Y and X. For doing this the command is
-    plotluck(task,Y~X), remembering that the name of the data frame is task,
-    Y is the time to perform a task, and X is the number of members of the
-    team which performs the task. Enter this command now.
-  CorrectAnswer: plotluck(task,Y~X)
-  AnswerTests: omnitest(correctExpr='plotluck(task,Y~X)')
-  Hint: You have to enter "plotluck(task,Y~X)" to get a trace of the relation
-    between Y and X.
+  Output: We will use now smooth the variation of the dependent variable
+    with a techique known as Lowess or Loess. It allows us to get an idea
+    of a possible non-linear relation between Y and X. Plot first the 
+    scatterplot again by entering the appropriate command.
+  CorrectAnswer: plot(Y~X)
+  AnswerTests: omnitest(correctExpr='plot(Y~X)')
+  Hint: You have to enter «plot(Y~X)» to get a scatterplot of Y on X.
+
+- Class: cmd_question
+  Output: We will now superimpose a smoothed curve obtained with the Lowess
+    method with the command lines(lowess(Y~X), col=2).
+  CorrectAnswer: lines(lowess(Y~X), col=2)
+  AnswerTests: omnitest(correctExpr='lines(lowess(Y~X), col=2)')
+  Hint: You have to enter «lines(lowess(Y~X), col=2)» to obtain a trace
+    of the relation of Y and X.
 
 - Class: mult_question
   Output: The number of members in the team which is optimal (it minimizes
