@@ -164,7 +164,7 @@
    and final variable, and assign the result to an object called "fit".
   CorrectAnswer: fit <- lm(final~midterm)
   AnswerTests: omnitest(correctExpr='fit <- lm(final~midterm)')
-  Hint: You have to enter "fit <- cor(midterm,final)" to compute the
+  Hint: You have to enter "fit <- lm(final~midterm)" to compute the
    regression line and save the results in an object called fit.
 
 - Class: cmd_question
@@ -291,7 +291,7 @@
   Hint: You have to enter "hist(fit.res)" to plot a histogram of the  residuals.
 
 - Class: text
-  Output: The histogram allows as to assess if the residuals have an 
+  Output: The histogram allows as to assess if the residuals have an
     approximately normal distribution, which is one of the assumptions
     for the results of the linear regression being reliable.
 
@@ -311,7 +311,7 @@
 - Class: cmd_question
   Output: To analyze influential cases we have to identify them by knowing
     the case number, eliminate them, and see if the slope coefficient changes
-    or not. 
+    or not.
     A useful command to identify outliers is the identify() function
     of R. Entering identify(Y~X) you get a scatterplot between Y and X. You
     can click on the different cases you want to identify, and once you
@@ -452,7 +452,7 @@
 - Class: cmd_question
   Output: We will use now smooth the variation of the dependent variable
     with a techique known as Lowess or Loess. It allows us to get an idea
-    of a possible non-linear relation between Y and X. Plot first the 
+    of a possible non-linear relation between Y and X. Plot first the
     scatterplot again by entering the appropriate command.
   CorrectAnswer: plot(Y~X)
   AnswerTests: omnitest(correctExpr='plot(Y~X)')
